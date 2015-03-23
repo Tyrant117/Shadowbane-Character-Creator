@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace Shadowbane_Character_Builder.CharacterInfo
 {
+    /// <summary>
+    /// Abstract Class for Races.
+    /// </summary>
     public abstract class Race
     {
         public float Cost;
         public enum RaceEnum { Human, Aelfborn, Dwarf, Elf, HalfGiant, Irekei, Shade, Aracoix, Centaur, Minotaur, Nephilim, Vampire };
         public RaceEnum raceType{get; set;}
 
+        /// <summary>
+        /// Virtual Method for setting the base stats of a race.
+        /// </summary>
+        /// <param name="character"></param>
         public virtual void SetStartingStats(Character character) { return; }
         public override string ToString()
         {

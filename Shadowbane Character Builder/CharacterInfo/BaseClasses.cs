@@ -6,12 +6,24 @@ using System.Threading.Tasks;
 
 namespace Shadowbane_Character_Builder.CharacterInfo
 {
+    /// <summary>
+    /// Abstract class. This is used as a parent for the 4 main base classes. Fighter, Healer, Rogue, Mage.
+    /// </summary>
     public abstract class BaseClass
     {
         public enum ClassType {Fighter, Healer, Rogue, Mage };
         public ClassType baseType;
 
+        /// <summary>
+        /// Set Max Training Points. Humans have more than other races.
+        /// </summary>
+        /// <param name="isHuman"></param>
+        /// <returns></returns>
         public virtual float SetTrainingPoints(bool isHuman) { return 0; }
+        /// <summary>
+        /// Sets the bonus stats that a certain class gives.
+        /// </summary>
+        /// <param name="character"></param>
         public virtual void SetStats(Character character) { return; }
 
         public override string ToString()
@@ -19,7 +31,9 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             return baseType.ToString();
         }
     }
-
+    /// <summary>
+    /// Fighter Base Class
+    /// </summary>
     public class Fighter : BaseClass
     {
         public Fighter()
@@ -46,7 +60,9 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.Intelligence.Subtract(10);
         }
     }
-
+    /// <summary>
+    /// Healer Base Class
+    /// </summary>
     public class Healer : BaseClass
     {
         public Healer()
@@ -73,7 +89,9 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.Dexterity.Subtract(10);
         }
     }
-
+    /// <summary>
+    /// Rogue Base Class
+    /// </summary>
     public class Rogue : BaseClass
     {
         public Rogue()
@@ -100,7 +118,9 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.Spirit.Subtract(10);
         }
     }
-
+    /// <summary>
+    /// Mage Base Class
+    /// </summary>
     public class Mage : BaseClass
     {
         public Mage()

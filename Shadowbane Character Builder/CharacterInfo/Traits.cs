@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Shadowbane_Character_Builder.CharacterInfo
 {
+    /// <summary>
+    /// Abstract Class for Traits. These are selected only at character creation.
+    /// </summary>
     public abstract class Trait
     {
         public float Cost;

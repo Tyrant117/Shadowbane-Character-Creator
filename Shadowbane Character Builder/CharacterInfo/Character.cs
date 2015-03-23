@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace Shadowbane_Character_Builder.CharacterInfo
 {
+    /// <summary>
+    /// Default Character Class.
+    /// </summary>
     public class Character
     {
         public Race myRace;
         public BaseClass myBaseClass;
+
+        #region Rune Bools - These are the runes that are checked at character creation, so you can't have multiple.
         public bool hasApprenticeRune;
         public bool hasSubrace;
         public bool hasChildhoodRune;
@@ -20,6 +25,7 @@ namespace Shadowbane_Character_Builder.CharacterInfo
         public bool hasConstitutionRune;
         public bool hasStrengthRune;
         public bool hasDexterityRune;
+        #endregion
 
         public float Health { get; set; }
         public float Mana { get; set; }
@@ -59,6 +65,10 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             myBaseClass.SetStats(this);
         }
 
+        /// <summary>
+        /// Set the race of the character.
+        /// </summary>
+        /// <param name="newRace"></param>
         public void SetNewRace(Race newRace)
         {
             myRace = null;
@@ -66,6 +76,10 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             myRace.SetStartingStats(this);
         }
 
+        /// <summary>
+        /// Set the base class of the character.
+        /// </summary>
+        /// <param name="newBaseClass"></param>
         public void SetNewBaseClass(BaseClass newBaseClass)
         {
             myBaseClass = null;
@@ -80,6 +94,7 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             }
             myBaseClass.SetStats(this);
         }
+
     }
 
     public struct StatStrength
@@ -446,27 +461,27 @@ namespace Shadowbane_Character_Builder.CharacterInfo
 
     public struct StatAbilityPoints
     {
-        public float NewCharValue;
-        public float NewCharMax;
+        public float NewCharValue; // Value used in character creation.
+        public float NewCharMax; // Max Value in character creation. 55-Cost of the Race.
 
-        public float PostCreateValue;
-        public float PostCreateMax;
+        public float PostCreateValue; // Ability points after character creation.
+        public float PostCreateMax; // Max ability points after character creation.
 
         public void AddPost(float val)
         {
             if (NewCharValue + val <= NewCharMax) { NewCharValue += val; } else { NewCharValue = NewCharMax; }
-        }
+        } //TODO Incomplete
 
         public void SubtractPost(float val)
         {
             if (PostCreateValue - val >= 0) { PostCreateValue -= val; } else { PostCreateValue = 0; }
-        }
+        } //TODO Incomplete
 
         public void SetStartValues(float val)
         {
             NewCharMax = val;
             NewCharValue = val;
-        }
+        }  //TODO Incomplete
 
         public bool canAddNew(float val)
         {
