@@ -38,6 +38,15 @@ namespace Shadowbane_Character_Builder
             {
                 RaceSelextBox.Items.Add(RaceArray[i]);
             }
+            AddTraits();
+            for (int i = 0; i < Traits.Count; i++)
+            {
+                TraitSelectBox.Items.Add(Traits[i]);
+            }
+        }
+
+        void AddTraits()
+        {
             Traits.Add(new TraitControl().newControl(new Mighty()));
             Traits.Add(new TraitControl().newControl(new HerosStrength()));
             Traits.Add(new TraitControl().newControl(new Hearty()));
@@ -109,11 +118,6 @@ namespace Shadowbane_Character_Builder
             Traits.Add(new TraitControl().newControl(new Wanderer()));
             Traits.Add(new TraitControl().newControl(new WitchSight()));
             Traits.Add(new TraitControl().newControl(new Woodsman()));
-
-            for (int i = 0; i < Traits.Count; i++)
-            {
-                TraitSelectBox.Items.Add(Traits[i]);
-            }
         }
 
         void UpdateCharacterDisplays()

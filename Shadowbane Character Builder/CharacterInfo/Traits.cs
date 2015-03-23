@@ -50,6 +50,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.AbilityPoints.SubtractNew(Cost);
         }
 
+        public override void RemoveTrait(Character character)
+        {
+            character.Strength.Subtract(Str);
+            character.Strength.SubtractMax(MaxStr);
+            character.hasStrengthRune = false;
+            character.AbilityPoints.AddNew(Cost);
+        }
+
         public override float GetMinStatRequired()
         {
             return MinReqStr;
@@ -61,7 +69,8 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 "Effects:\n" +
                 "Strength Rune\n" +
                 "+5 to Str\n" +
-                "+5 to max Str";
+                "+5 to max Str\n"+
+                "Min Str: 40";
         }
     }
     public class HerosStrength : Trait
@@ -85,6 +94,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.AbilityPoints.SubtractNew(Cost);
         }
 
+        public override void RemoveTrait(Character character)
+        {
+            character.Strength.Subtract(Str);
+            character.Strength.SubtractMax(MaxStr);
+            character.hasStrengthRune = false;
+            character.AbilityPoints.AddNew(Cost);
+        }
+
         public override float GetMinStatRequired()
         {
             return MinReqStr;
@@ -96,7 +113,8 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 "Effects:\n" +
                 "Strength Rune\n" +
                 "+10 to Str\n" +
-                "+10 to max Str";
+                "+10 to max Str\n" +
+                "Min Str: 50";
         }
     }
 
@@ -121,6 +139,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.AbilityPoints.SubtractNew(Cost);
         }
 
+        public override void RemoveTrait(Character character)
+        {
+            character.Constitution.Subtract(Con);
+            character.Constitution.SubtractMax(MaxCon);
+            character.hasConstitutionRune = false;
+            character.AbilityPoints.AddNew(Cost);
+        }
+
         public override float GetMinStatRequired()
         {
             return MinReqCon;
@@ -132,7 +158,8 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 "Effects:\n" +
                 "Constitution Rune\n" +
                 "+5 to Con\n" +
-                "+5 to max Con";
+                "+5 to max Con\n" +
+                "Min Con: 40";
         }
     }
     public class HealthyAsAnOx : Trait
@@ -156,6 +183,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.AbilityPoints.SubtractNew(Cost);
         }
 
+        public override void RemoveTrait(Character character)
+        {
+            character.Constitution.Subtract(Con);
+            character.Constitution.SubtractMax(MaxCon);
+            character.hasConstitutionRune = false;
+            character.AbilityPoints.AddNew(Cost);
+        }
+
         public override float GetMinStatRequired()
         {
             return MinReqCon;
@@ -167,7 +202,8 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 "Effects:\n" +
                 "Constitution Rune\n" +
                 "+10 to Con\n" +
-                "+10 to max Con";
+                "+10 to max Con\n" +
+                "Min Con: 50";
         }
     }
 
@@ -192,6 +228,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.AbilityPoints.SubtractNew(Cost);
         }
 
+        public override void RemoveTrait(Character character)
+        {
+            character.Dexterity.Subtract(Dex);
+            character.Dexterity.SubtractMax(MaxDex);
+            character.hasDexterityRune = false;
+            character.AbilityPoints.AddNew(Cost);
+        }
+
         public override float GetMinStatRequired()
         {
             return MinRequiredDex;
@@ -203,7 +247,8 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 "Effects:\n" +
                 "Dexterity Rune\n" +
                 "+5 to Dex\n" +
-                "+5 to max Dex";
+                "+5 to max Dex\n" +
+                "Min Dex: 40";
         }
     }
     public class LightningReflexes : Trait
@@ -227,6 +272,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.AbilityPoints.SubtractNew(Cost);
         }
 
+        public override void RemoveTrait(Character character)
+        {
+            character.Dexterity.Subtract(Dex);
+            character.Dexterity.SubtractMax(MaxDex);
+            character.hasDexterityRune = false;
+            character.AbilityPoints.AddNew(Cost);
+        }
+
         public override float GetMinStatRequired()
         {
             return MinReqDex;
@@ -238,7 +291,8 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 "Effects:\n" +
                 "Dexterity Rune\n" +
                 "+10 to Dex\n" +
-                "+10 to max Dex";
+                "+10 to max Dex" +
+                "Min Dex: 50";
         }
     }
 
@@ -263,6 +317,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.AbilityPoints.SubtractNew(Cost);
         }
 
+        public override void RemoveTrait(Character character)
+        {
+            character.Intelligence.Subtract(Int);
+            character.Intelligence.SubtractMax(MaxInt);
+            character.hasIntelligenceRune = false;
+            character.AbilityPoints.AddNew(Cost);
+        }
+
         public override float GetMinStatRequired()
         {
             return MinReqInt;
@@ -274,7 +336,8 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 "Effects:\n" +
                 "Intelligence Rune\n" +
                 "+5 to Int\n" +
-                "+5 to max Int";
+                "+5 to max Int\n" +
+                "Min Int: 40";
         }
     }
     public class BrilliantMind : Trait
@@ -298,6 +361,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.AbilityPoints.SubtractNew(Cost);
         }
 
+        public override void RemoveTrait(Character character)
+        {
+            character.Intelligence.Subtract(Int);
+            character.Intelligence.SubtractMax(MaxInt);
+            character.hasIntelligenceRune = false;
+            character.AbilityPoints.AddNew(Cost);
+        }
+
         public override float GetMinStatRequired()
         {
             return MinReqInt;
@@ -309,7 +380,8 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 "Effects:\n" +
                 "Intelligence Rune\n" +
                 "+10 to Int\n" +
-                "+10 to max Int";
+                "+10 to max Int\n" +
+                "Min Int: 50";
         }
     }
 
@@ -334,6 +406,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.AbilityPoints.SubtractNew(Cost);
         }
 
+        public override void RemoveTrait(Character character)
+        {
+            character.Spirit.Subtract(Spi);
+            character.Spirit.SubtractMax(MaxSpi);
+            character.hasSpiritRune = false;
+            character.AbilityPoints.AddNew(Cost);
+        }
+
         public override float GetMinStatRequired()
         {
             return MinReqSpi;
@@ -345,7 +425,8 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 "Effects:\n" +
                 "Spirit Rune\n" +
                 "+5 to Spi\n" +
-                "+5 to max Spi";
+                "+5 to max Spi\n" +
+                "Min Spi: 40";
         }
     }
     public class FaithOfAges : Trait
@@ -369,6 +450,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.AbilityPoints.SubtractNew(Cost);
         }
 
+        public override void RemoveTrait(Character character)
+        {
+            character.Spirit.Subtract(Spi);
+            character.Spirit.SubtractMax(MaxSpi);
+            character.hasSpiritRune = false;
+            character.AbilityPoints.AddNew(Cost);
+        }
+
         public override float GetMinStatRequired()
         {
             return MinReqSpi;
@@ -380,7 +469,8 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 "Effects:\n" +
                 "Spirit Rune\n" +
                 "+10 to Spi\n" +
-                "+10 to max Spi";
+                "+10 to max Spi\n" +
+                "Min Spi: 50";
         }
     }
     #endregion
@@ -902,11 +992,11 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             character.Strength.Max += MaxStr;
             character.Strength.Add(Str);
             character.Constitution.Max += MaxCon;
-            character.Constitution.Add(MaxCon);
+            character.Constitution.Add(Con);
             character.Dexterity.Max += MaxDex;
-            character.Dexterity.Add(MaxDex);
+            character.Dexterity.Add(Dex);
             character.Intelligence.Max += MaxInt;
-            character.Intelligence.Add(MaxInt);
+            character.Intelligence.Add(Int);
             character.AbilityPoints.SubtractNew(Cost);
         }
 
