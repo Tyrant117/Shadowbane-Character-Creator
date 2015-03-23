@@ -1,0 +1,40 @@
+﻿<Window x:Class="Shadowbane_Character_Builder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shadowbane Character Creator" Height="600 " Width="800" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Initialized="Window_Initialized">
+    <Grid>
+        <TextBox x:Name="BuildNameText" HorizontalAlignment="Left" Height="23" Margin="26,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+        <Label Content="Build Name" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Race" HorizontalAlignment="Left" Margin="26,69,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="RaceSelextBox" HorizontalAlignment="Left" Margin="26,95,0,0" VerticalAlignment="Top" Width="178" SelectionChanged="RaceSelextBox_SelectionChanged"/>
+        <Label Content="Base Class" HorizontalAlignment="Left" Margin="26,122,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="BaseClassSelectBox" HorizontalAlignment="Left" Margin="26,148,0,0" VerticalAlignment="Top" Width="178" SelectionChanged="BaseClassSelectBox_SelectionChanged"/>
+        <Label Content="Starting Ability Points" HorizontalAlignment="Left" Margin="231,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Ability Points" HorizontalAlignment="Left" Margin="374,10,0,0" VerticalAlignment="Top" Width="124" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Training Points" HorizontalAlignment="Left" Margin="519,10,0,0" VerticalAlignment="Top" Width="124" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="StartingAbilityPointsText" HorizontalAlignment="Left" Height="23" Margin="255,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" SelectionBrush="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="AbilityPointsText" HorizontalAlignment="Left" Height="23" Margin="400,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" SelectionBrush="{x:Null}" BorderThickness="0" Foreground="White" BorderBrush="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="TrainingPointsText" HorizontalAlignment="Left" Height="23" Margin="544,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" SelectionBrush="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Strength" HorizontalAlignment="Left" Margin="231,69,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="74"/>
+        <Label Content="Dexterity" HorizontalAlignment="Left" Margin="231,100,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="74"/>
+        <Label Content="Constitution" HorizontalAlignment="Left" Margin="230,131,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Intelligence" HorizontalAlignment="Left" Margin="230,162,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="75"/>
+        <Label Content="Spirit" HorizontalAlignment="Left" Margin="230,193,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="75"/>
+        <TextBox x:Name="StrengthText" HorizontalAlignment="Left" Height="23" Margin="310,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" SelectionBrush="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="DexterityText" HorizontalAlignment="Left" Height="23" Margin="310,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" SelectionBrush="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="ConstitutionText" HorizontalAlignment="Left" Height="23" Margin="310,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" SelectionBrush="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="IntelligenceText" HorizontalAlignment="Left" Height="23" Margin="310,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" SelectionBrush="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="SpiritText" HorizontalAlignment="Left" Height="23" Margin="310,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" SelectionBrush="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="StrengthAddButton" Content="+" HorizontalAlignment="Left" Margin="400,71,0,0" VerticalAlignment="Top" Width="32" Click="StrengthAddButton_Click"/>
+        <Button x:Name="StrengthSubButton" Content="-" HorizontalAlignment="Left" Margin="437,71,0,0" VerticalAlignment="Top" Width="32" Click="StrengthSubButton_Click"/>
+        <Button x:Name="DexterityAddButton" Content="+" HorizontalAlignment="Left" Margin="400,104,0,0" VerticalAlignment="Top" Width="32" Click="DexterityAddButton_Click"/>
+        <Button x:Name="DexteritySubButton" Content="-" HorizontalAlignment="Left" Margin="437,104,0,0" VerticalAlignment="Top" Width="32" Click="DexteritySubButton_Click"/>
+        <Button x:Name="ConstitutionAddButton" Content="+" HorizontalAlignment="Left" Margin="400,135,0,0" VerticalAlignment="Top" Width="32" Click="ConstitutionAddButton_Click"/>
+        <Button x:Name="ConstitutionSubButton" Content="-" HorizontalAlignment="Left" Margin="437,135,0,0" VerticalAlignment="Top" Width="32" Click="ConstitutionSubButton_Click"/>
+        <Button x:Name="IntelligenceAddButton" Content="+" HorizontalAlignment="Left" Margin="400,166,0,0" VerticalAlignment="Top" Width="32" Click="IntelligenceAddButton_Click"/>
+        <Button x:Name="IntelligenceSubButton" Content="-" HorizontalAlignment="Left" Margin="437,166,0,0" VerticalAlignment="Top" Width="32" Click="IntelligenceSubButton_Click"/>
+        <Button x:Name="SpiritAddButton" Content="+" HorizontalAlignment="Left" Margin="400,194,0,0" VerticalAlignment="Top" Width="32" Click="SpiritAddButton_Click"/>
+        <Button x:Name="SpiritSubButton" Content="-" HorizontalAlignment="Left" Margin="437,194,0,0" VerticalAlignment="Top" Width="32" Click="SpiritSubButton_Click"/>
+
+    </Grid>
+</Window>

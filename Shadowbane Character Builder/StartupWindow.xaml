@@ -1,0 +1,10 @@
+﻿<Window x:Class="Shadowbane_Character_Builder.StartupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shadowbane Character Creator" Height="200 " Width="360" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
+    <Grid>
+        <Button x:Name="CreateButton" Content="Create New" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="94" Height="44" Click="CreateButton_Click"/>
+        <Button x:Name="EditButton" Content="Edit Existing" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="94" Height="44"/>
+        <Button x:Name="ViewButton" Content="View Existing" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Center" Width="94" Height="44"/>
+    </Grid>
+</Window>
