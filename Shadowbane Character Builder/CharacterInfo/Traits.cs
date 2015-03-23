@@ -196,6 +196,15 @@ namespace Shadowbane_Character_Builder.CharacterInfo
         {
             return MinRequiredDex;
         }
+
+        public override string ToTooltip()
+        {
+            return "Agile\n" +
+                "Effects:\n" +
+                "Dexterity Rune\n" +
+                "+5 to Dex\n" +
+                "+5 to max Dex";
+        }
     }
     public class LightningReflexes : Trait
     {
@@ -221,6 +230,15 @@ namespace Shadowbane_Character_Builder.CharacterInfo
         public override float GetMinStatRequired()
         {
             return MinReqDex;
+        }
+
+        public override string ToTooltip()
+        {
+            return "Lightning Reflexes\n" +
+                "Effects:\n" +
+                "Dexterity Rune\n" +
+                "+10 to Dex\n" +
+                "+10 to max Dex";
         }
     }
 
@@ -249,6 +267,15 @@ namespace Shadowbane_Character_Builder.CharacterInfo
         {
             return MinReqInt;
         }
+
+        public override string ToTooltip()
+        {
+            return "Clever\n" +
+                "Effects:\n" +
+                "Intelligence Rune\n" +
+                "+5 to Int\n" +
+                "+5 to max Int";
+        }
     }
     public class BrilliantMind : Trait
     {
@@ -274,6 +301,15 @@ namespace Shadowbane_Character_Builder.CharacterInfo
         public override float GetMinStatRequired()
         {
             return MinReqInt;
+        }
+
+        public override string ToTooltip()
+        {
+            return "Brilliant Mind\n" +
+                "Effects:\n" +
+                "Intelligence Rune\n" +
+                "+10 to Int\n" +
+                "+10 to max Int";
         }
     }
 
@@ -302,6 +338,15 @@ namespace Shadowbane_Character_Builder.CharacterInfo
         {
             return MinReqSpi;
         }
+
+        public override string ToTooltip()
+        {
+            return "True Faith\n" +
+                "Effects:\n" +
+                "Spirit Rune\n" +
+                "+5 to Spi\n" +
+                "+5 to max Spi";
+        }
     }
     public class FaithOfAges : Trait
     {
@@ -327,6 +372,15 @@ namespace Shadowbane_Character_Builder.CharacterInfo
         public override float GetMinStatRequired()
         {
             return MinReqSpi;
+        }
+
+        public override string ToTooltip()
+        {
+            return "Faith of Ages\n" +
+                "Effects:\n" +
+                "Spirit Rune\n" +
+                "+10 to Spi\n" +
+                "+10 to max Spi";
         }
     }
     #endregion
@@ -807,6 +861,14 @@ namespace Shadowbane_Character_Builder.CharacterInfo
             }
             else { return true; }
         }
+
+        public override string ToTooltip()
+        {
+            return "\n" +
+                "Effects:\n" +
+                "Speed Rune\n" +
+                "+5% to Movement Speed\n";
+        }
     }
 
     public class GiantsBlood : Trait
@@ -864,6 +926,21 @@ namespace Shadowbane_Character_Builder.CharacterInfo
                 return true;
             }
             else { return false; }
+        }
+
+        public override string ToTooltip()
+        {
+            return "Giant's Blood\n" +
+                "Effects:\n" +
+                "Racial Rune\n" +
+                "+10 to Str\n" +
+                "+15 max Str\n" +
+                "-5 Dex\n" +
+                "-10 max Dex" +
+                "+5 Con\n" +
+                "+10 max Con\n"+
+                "-5 Int\n" +
+                "-10 to max Int";
         }
     }
 
@@ -1155,7 +1232,7 @@ namespace Shadowbane_Character_Builder.CharacterInfo
 
     }
 
-    public class WitchSite : Trait // TODO Implement
+    public class WitchSight : Trait // TODO Implement
     {
 
     }
