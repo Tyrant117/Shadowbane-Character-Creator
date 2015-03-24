@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+ * V0.1, 03/23/2015
+ * This is the class for governing the attributes and tool tips given to
+ * Traits selected at character creation. 
+ * The trait list for the trait window can be found
+ * by selecting the trait window and viewing its code.
+ * 
+ * 
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -715,33 +726,55 @@ namespace Shadowbane_Character_Builder.CharacterInfo
 
         public override string ToTooltip()
         {
-            return "Ambidexterity tooltip";
+            return "Ambidexterity\n" + 
+                "Grants the ability to wield two weapons" +
+                "Min Dex Req: 50 ";
         }
     }
 
     public class Blessed : Trait //TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Blessed \n" +
+                "Grants +5 holy resist";
+        }
     }
 
     public class BloodOfTheDesert : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Blood of The Desert \n" +
+                "Grants +5 fire resist";
+        }
     }
 
     public class BloodOfTheNorth : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Blood of the North \n" +
+                "Grants +5 Cold resist";
+        }
     }
 
     public class BloodOfTheCountry : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Blessed \n" +
+                "Grants +5 holy resist";
+        }
     }
 
     public class BornInTheCountry : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Born in The Country \n" +
+                "Grants +5 Staff skill";
+        }
     }
 
     #region Subrace
@@ -900,22 +933,39 @@ namespace Shadowbane_Character_Builder.CharacterInfo
 
     public class BowyerBorn : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Bowyer Born\n" +
+                "Grants +5 bow skill";
+        }
     }
 
     public class Brawler : Trait // TODO Implement
     {
-        
+        public override string ToTooltip()
+        {
+            return "Brawler\n" +
+                "Grants +10 Unarmed Combat Skill" +
+                "Grants the Unarmed Combat Skill";
+        }
     }
 
     public class Bruiser : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Bruiser\n" +
+                "Grants +5 Hammer Skill";
+        }
     }
 
     public class Changeling : Trait //TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Changeling\n" +
+                "Grants +5 magic resist";
+        }
     }
 
     public class EyesOfTheEagle : Trait //TODO Implement
@@ -954,7 +1004,7 @@ namespace Shadowbane_Character_Builder.CharacterInfo
 
         public override string ToTooltip()
         {
-            return "\n" +
+            return "Fleet Of Foot\n" +
                 "Effects:\n" +
                 "Speed Rune\n" +
                 "+5% to Movement Speed\n";
@@ -1036,7 +1086,11 @@ namespace Shadowbane_Character_Builder.CharacterInfo
 
     public class Hunter : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Hunter\n" +
+                "Grants +5 Spear Skill";
+        }
     }
 
     #region Small Stats
@@ -1169,67 +1223,119 @@ namespace Shadowbane_Character_Builder.CharacterInfo
 
     public class IronWill : Trait //TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Iron Will \n" +
+                "Grants +5 Mental Resist";
+        }
     }
 
     public class KnifeFighter : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Knife Fighter\n" +
+                "Grants +5 Dagger Skill";
+        }
     }
 
     public class KnightsSquire : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Knight's Squire\n" +
+                "Grants +5 Medium Armor Skill";
+        }
     }
 
     public class Lucky : Trait //TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "lucky \n" +
+                "Grants +5% Defense Rating";
+        }
     }
 
     public class Mercenary : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Mercenary\n" +
+                "Grants +5 Pole Arm Skill";
+        }
     }
 
     public class MilitaryTraining : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Military Training\n" +
+                "Grants +5 Light Armor Skill";
+        }
     }
 
     public class Precise : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Precise\n" +
+                "Grants +5% Attack Rating";
+        }
     }
 
     public class ProficientWithCrossbows : Trait //TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Proficient With Crossbows\n" +
+                "Grants Crossbow Skill";
+        }
     }
 
     public class ProficientWithPoleArms : Trait //TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Proficient With Pole Arms\n" +
+                "Grants Pole Arm Skill";
+        }
     }
 
     public class ProficientWithSpears : Trait //TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Proficient With Spears\n" +
+                "Grants Spear Skill";
+        }
     }
 
     public class ProficientWithStaves : Trait //TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Proficient With Staves\n" +
+                "Grants Staff Skill";
+        }
     }
 
     public class RaisedByBarbarians : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Raised By Barbarians\n" +
+                "Grants +5 Axe Skill";
+        }
     }
 
     public class RaisedByCentaurs : Trait // TODO Implement
     {
-
+        public override string ToTooltip()
+        {
+            return "Raised By Centaurs\n" +
+                "Grants +5 Spear Skill";
+        }
     }
 
     public class RaisedByDwarves : Trait // TODO Implement
